@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin-top:4rem;
+  margin-bottom: 4rem;
+  min-height: 100vh;
+  background-color: green;
+  font-family: "lato", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.marquee {
+  width: 100%;
+  padding: 90px 20px;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  text-align: center;
+  justify-content: center; 
+  background-color: cyan;
+  /* color: maroon; */
+}
+
+.marquee h3 {
+  font-size: 94px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(178, 48, 0);
+}
+
+.marquee-wrapper {
+  width: 100000px;
+  animation: marqueeAnimation 38s linear 0s infinite;
+ }
+
+ .marquee h3 .marquee-title { 
+  margin: 20px;
+  float: left;
+ }
+
+ .text-stroke-black {
+  color: transparent;
+  -webkit-text-stroke: 1px;
+  /* -webkit-text-stroke-color: #db0000da; */
+  color: rgba(144, 5, 19, 0.986);
+ }
+
+ span {
+  color: crimson;
+ }
+
+.marquee-wrapper:hover {
+  animation-play-state:paused!important;
+ }
+
+ /* animation syntax */
+ @keyframes marqueeAnimation{
+  100%{
+    transform: translateX(-20000px);
+  }
+ }
+
+
+  /* responsive  */
+
+ @media (max-width:992px){
+  .marquee h3 {
+    font-size: 60px;
+  }
+  
+ }
+
+ @media (max-width:549px){
+  .marquee h3 {
+    font-size: 50px;
+  }
+  @keyframes marqueeAnimation{
+    100%{
+      transform: translateX(-7990px);
+    }
+   }
+
+ }
